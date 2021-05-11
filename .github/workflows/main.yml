@@ -12,13 +12,13 @@ jobs:
       name: Checkout Code
      
     - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+      uses: microsoft/setup-msbuild@v1.0.2
        
     - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+      uses: nuget/setup-nuget@v1
      
     - name: Restore NuGet Packages
       run: nuget restore winratecheck-hots-reddit.sln
  
     - name: Build and Publish Web App
-      run: msbuild SimpleFrameworkApp.sln /p:Configuration=Release
+      run: msbuild winratecheck-hots-reddit.sln /p:Configuration=Release
