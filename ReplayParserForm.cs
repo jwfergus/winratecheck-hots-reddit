@@ -22,12 +22,6 @@ namespace winratecheck_hots_reddit
             {
                 FolderBrowserDialog fbd = new FolderBrowserDialog();
 
-
-                // TESTING
-                fbd.SelectedPath = @"C:\Users\admin\Documents\Heroes of the Storm\Accounts\79127123\1-Hero-1-4002586\Replays\Multiplayer";
-                // TESTING
-
-
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
                      replayParser = new ReplayParser(fbd.SelectedPath);
