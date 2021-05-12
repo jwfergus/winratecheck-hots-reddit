@@ -24,7 +24,7 @@ jobs:
       run: msbuild winratecheck-hots-reddit.sln /p:Configuration=Release
     
     - name: Upload Artifact
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
        name: winratecheck-hots-reddit
        path: bin/Debug
